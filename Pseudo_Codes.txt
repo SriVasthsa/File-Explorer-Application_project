@@ -1,0 +1,171 @@
+Day 1: Design the application structure and setup the development environment
+
+function initializeLogger()
+    // Configure logger settings
+
+function listFiles(directory)
+    for each file in directory
+        print file name
+        log file name
+
+function main()
+    initializeLogger()
+    log "Application started"
+    listFiles(current_directory)
+    log "Application ended"
+
+Day 2: Implement file and directory navigation features
+
+function changeDirectory(directory)
+    try
+        set current directory to directory
+        log "Changed directory to " + directory
+    catch error
+        log error message
+        print error message
+
+function main()
+    initializeLogger()
+    log "Application started"
+    while true
+        user_input = get user command
+        if user_input is "list"
+            listFiles(current_directory)
+        else if user_input is "cd <directory>"
+            changeDirectory(directory)
+        else if user_input is "exit"
+            break
+    log "Application ended"
+
+Day 3: Add file manipulation capabilities
+
+function copyFile(source, destination)
+    try
+        copy source to destination
+        log "Copied " + source + " to " + destination
+    catch error
+        log error message
+        print error message
+
+function moveFile(source, destination)
+    try
+        move/rename source to destination
+        log "Moved " + source + " to " + destination
+    catch error
+        log error message
+        print error message
+
+function deleteFile(path)
+    try
+        delete file at path
+        log "Deleted " + path
+    catch error
+        log error message
+        print error message
+
+function createFile(path)
+    try
+        create file at path
+        log "Created " + path
+    catch error
+        log error message
+        print error message
+
+function main()
+    initializeLogger()
+    log "Application started"
+    while true
+        user_input = get user command
+        if user_input is "list"
+            listFiles(current_directory)
+        else if user_input is "cd <directory>"
+            changeDirectory(directory)
+        else if user_input is "copy <source> <destination>"
+            copyFile(source, destination)
+        else if user_input is "move <source> <destination>"
+            moveFile(source, destination)
+        else if user_input is "delete <path>"
+            deleteFile(path)
+        else if user_input is "create <path>"
+            createFile(path)
+        else if user_input is "exit"
+            break
+    log "Application ended"
+
+Day 4: Implement file search functionality
+
+function searchFiles(directory, pattern)
+    regex_pattern = compile pattern
+    for each file in directory and subdirectories
+        if file matches regex_pattern
+            print file name
+            log "Found matching file: " + file name
+
+function main()
+    initializeLogger()
+    log "Application started"
+    while true
+        user_input = get user command
+        if user_input is "list"
+            listFiles(current_directory)
+        else if user_input is "cd <directory>"
+            changeDirectory(directory)
+        else if user_input is "copy <source> <destination>"
+            copyFile(source, destination)
+        else if user_input is "move <source> <destination>"
+            moveFile(source, destination)
+        else if user_input is "delete <path>"
+            deleteFile(path)
+        else if user_input is "create <path>"
+            createFile(path)
+        else if user_input is "search <pattern>"
+            searchFiles(current_directory, pattern)
+        else if user_input is "exit"
+            break
+    log "Application ended"
+
+Day 5: Add file permission management features
+
+function getFilePermissions(path)
+    try
+        permissions = get permissions of path
+        print permissions
+        log "Permissions for " + path + ": " + permissions
+    catch error
+        log error message
+        print error message
+
+function setFilePermissions(path, permissions)
+    try
+        set permissions of path to permissions
+        log "Set permissions for " + path + " to " + permissions
+    catch error
+        log error message
+        print error message
+
+function main()
+    initializeLogger()
+    log "Application started"
+    while true
+        user_input = get user command
+        if user_input is "list"
+            listFiles(current_directory)
+        else if user_input is "cd <directory>"
+            changeDirectory(directory)
+        else if user_input is "copy <source> <destination>"
+            copyFile(source, destination)
+        else if user_input is "move <source> <destination>"
+            moveFile(source, destination)
+        else if user_input is "delete <path>"
+            deleteFile(path)
+        else if user_input is "create <path>"
+            createFile(path)
+        else if user_input is "search <pattern>"
+            searchFiles(current_directory, pattern)
+        else if user_input is "getPerms <path>"
+            getFilePermissions(path)
+        else if user_input is "setPerms <path> <permissions>"
+            setFilePermissions(path, permissions)
+        else if user_input is "exit"
+            break
+    log "Application ended"
