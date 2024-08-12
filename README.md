@@ -34,7 +34,7 @@ and **Chitikela.Prabhakar**
 
 bash
 
-git clone: 
+git clone: https://github.com/SriVasthsa/File-Explorer-Application_project/tree/main
 
 **2.Navigate to the Project Directory:**
 
